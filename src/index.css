@@ -6,6 +6,57 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* --------------GENERAL--------------- */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ---------------CHECKBOX----------- */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  width: 55px;
+  height: 29px;
+  border-radius: 15px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.ball_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.ball {
+  display: flex;
+  align-content: inherit;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  width: 25px;
+  padding: 3px 14px;
+  border: 1px solid #fff;
+  background-color: #022d50;
+  border-radius: 50%;
+  font-size: 13px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.checkbox-container .checkbox:checked + .ball {
+  transform: translateX(90%);
 }
