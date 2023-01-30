@@ -4,7 +4,7 @@ const ASIDE_CARDS = [
   {
     title: "Editor's Pick",
     img: "https://s.w-x.co/febout129_1.jpg?crop=16:9&width=640&format=pjpg&auto=webp&quality=60",
-    description: "Your Feb. Tempreture Outlook Has Arrived",
+    description: "Your Feb. Temperature Outlook Has Arrived",
     action: "",
   },
   {
@@ -20,7 +20,7 @@ const ASIDE_CARDS = [
     action: "Go to Survey to day",
   },
   {
-    title: "Editor's Pick",
+    title: "Watching this Winter",
     img: "https://s.w-x.co/0127SpinningIceDisk.png?crop=16:9&width=640&format=pjpg&auto=webp&quality=60",
     description: "A Waterfall and Stream Create A Slowly Spinner ice Disk",
     action: "",
@@ -29,7 +29,7 @@ const ASIDE_CARDS = [
 
 const Aside = (props) => {
   return (
-    <aside className="basis-96 grid grid-cols-1 space-y-6 p-4 bg-blue_100">
+    <aside className="basis-96 grid grid-cols-1 gap-y-6 p-4 bg-blue_100 md:grid-cols-2 md:gap-x-6 lg:grid-cols-1 lg:gap-x-0 lg:bg-transparent">
       {ASIDE_CARDS.map((card) => (
         <div
           key={card.title}
