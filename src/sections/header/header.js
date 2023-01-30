@@ -49,11 +49,14 @@ const LARGE_SCREEN_NAV_ITEM = [
 const Header = () => {
   const [unit, setUnit] = useState("f");
   return (
-    <header className="fixed top-0 left-0 right-0  flex flex-col ">
-      <div className="bg-dark_blue">
-        <div className="container flex justify-between items-center py-4 px-4">
-          <a href="#" className="block w-logo bg-gray_100 text-dark_blue ">
-            <span className="block mt-3 font-extrabold px-2 pb-2 leading-4">
+    <header className="fixed top-0 left-0 right-0  flex flex-col">
+      <div className="bg-blue_600 px-4">
+        <div className="container flex justify-between items-center py-4">
+          <a
+            href="#"
+            className="block w-16 bg-gray_100 text-dark_blue lg:w-logo"
+          >
+            <span className="block pt-2   font-extrabold px-1 pb-1 text-10 leading-extra-packed lg:text-14">
               The Weather Channel
             </span>
           </a>
@@ -73,31 +76,33 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="hidden bg-light_blue px-10 py-4">
-        <div className="container">little summary</div>
+      <div className="hidden bg-blue_200 px-4 py-2 lg:flex">
+        <div className="container text-14 text-gray_100">little summary</div>
       </div>
-      <nav className="">
-        <ul className="fixed left-0 right-0 bottom-0 flex justify-between shadow-shadow-top px-4 py-2 lg:hidden">
-          {SHORT_SCREEN_NAV_ITEM.map((item) => (
-            <li
-              key={item.title}
-              className="flex flex-col space-y-1 items-center"
-            >
-              {item.icon}
-              <span className="text-xs">{item.title}</span>
-            </li>
-          ))}
-        </ul>
-        <ul className="hidden bg-light_blue text-gray_100 justify-between items-center px-4 pt-4 lg:flex">
-          {LARGE_SCREEN_NAV_ITEM.map((item) => (
-            <li
-              key={item.title}
-              className="h-10 hover:border-b-4 hover:border-gray-100"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+      <nav className="bg-gray-100 lg:bg-blue_900">
+        <div className="container px-4">
+          <ul className="fixed bg-gray_100 left-0 right-0 bottom-0 flex justify-between shadow-shadow-top py-2 lg:hidden">
+            {SHORT_SCREEN_NAV_ITEM.map((item) => (
+              <li
+                key={item.title}
+                className="flex flex-col space-y-1 items-center px-2"
+              >
+                {item.icon}
+                <span className="text-12">{item.title}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="hidden  text-gray_100 justify-between items-center pt-4 lg:flex">
+            {LARGE_SCREEN_NAV_ITEM.map((item) => (
+              <li
+                key={item}
+                className="h-10 hover:border-b-4 hover:border-gray-100"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );
