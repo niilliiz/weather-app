@@ -1,10 +1,12 @@
 import "./App.css";
 import Header from "./sections/header/header";
+import Home from "./pages/home/home";
 
 function App() {
   return (
-    <div className="my-18 flex flex-col space-y-12">
+    <div className="flex flex-col">
       <Header />
+      <Home />
     </div>
   );
 }

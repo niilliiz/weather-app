@@ -18,6 +18,7 @@ module.exports = {
       24: "1.5rem",
     },
     colors: {
+      transparent: "transparent",
       blue_100: "#D8EEEE",
       blue_200: "#337a9e",
       blue_600: "#005986",
@@ -41,7 +42,7 @@ module.exports = {
       },
       margin: {
         "home-sm": "6.2rem",
-        "home-lg": "12rem",
+        "home-lg": "11.2rem",
       },
     },
   },
